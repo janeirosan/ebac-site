@@ -34,6 +34,7 @@ body {
 
 header {
     background-color: var(--fine-bg);
+    position: sticky;
 }
 
 .container {
@@ -110,11 +111,15 @@ header nav li a {
     color: #fff;
 }
 
+header nav li a:hover {
+    color: var(--fine-accent);
+}
+
 header h1 a {
     color: var(--text-offwhite);
 }
 
-a, a:visited {
+a {
     text-decoration: none;
     color: var(--fine-accent);
     font-weight: 500;
@@ -154,8 +159,8 @@ main p {
 
 #join form {
     width: fit-content;
-    margin: 10px;
-    padding: 15px;
+    margin: 20px 10px;
+    padding: 7px 15px 15px;
     background-color: #aabdd44f;
     border-radius: 10px;
     color: #12326f;
@@ -186,11 +191,13 @@ main p {
 #join input,
 #join textarea {
     font-family: var(--font-body);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     border: none;
     border-radius: 3px;
     background-color: #468da13a;
+    color: var(--fine-accent)
+    padding 0 2px;
 }
 
 #join input:focus,
@@ -199,12 +206,23 @@ main p {
     outline-offset: -1px;
 }
 
+#join input::placeholder {
+    padding-left: 2px;
+    color: #12336fad;
+}
+
+#join textarea::placeholder,
+#join textarea {
+    padding-left: 2px;
+    color: #12336fad;
+}
+
 #join button {
     border: none;
     border-radius: 3px;
     color: #fff;
     background-color: var(--fine-bg);
-    padding: 3px;
+    padding: 4px;
     width: 100%;
     font-family: var(--font-body);
     font-weight: 600;
