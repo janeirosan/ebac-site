@@ -168,6 +168,10 @@ main p {
     margin-bottom: 10px;
 }
 
+#join .logo {
+    margin-top: 20px;
+}
+
 #join form {
     width: fit-content;
     margin: 20px 10px;
