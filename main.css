@@ -27,6 +27,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-offwhite);
     font-family: var(--font-body);
@@ -69,7 +73,7 @@ header h1 span {
     font-size: calc( var(--h1-font) / 1.8);
 }
 
-header .container nav {
+.container nav {
     background-color: var(--fine-yellow);
     padding: 10px;
     display: flex;
@@ -242,4 +246,10 @@ main p {
 
 a, #join button {
     transition: .3s ease;
+}
+
+footer .container {
+    display: flex;
+    padding: 20px;
+    background-color: var(--fine-yellow);
 }
