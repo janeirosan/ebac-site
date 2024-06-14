@@ -34,11 +34,11 @@ html {
 body {
     background-color: var(--bg-offwhite);
     font-family: var(--font-body);
+    overflow-x: hidden;
 }
 
 header {
     background-color: var(--fine-bg);
-    position: sticky;
 }
 
 .container {
@@ -47,17 +47,12 @@ header {
     margin: 0 auto;
 }
 
-header .container div {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header img {
-    width: 400px;
-    height: calc(var(--h1-font) + 80px);
-    object-fit: cover;
-    object-position: 0 15%;
+    column-gap: 100px;
+    position: relative;
 }
 
 header h1 {
@@ -73,24 +68,35 @@ header h1 span {
     font-size: calc( var(--h1-font) / 1.8);
 }
 
-.container nav {
+.fufu {
+    max-height: fit-content;
+    padding: 0;
+    display: flex;
+}
+
+header img {
+    width: 450px;
+    height: calc(var(--h1-font) + 90px);
+    object-fit: cover;
+    object-position: 0 15%;
+}
+
+header p {
+    width: fit-content;
+    position: relative;
+    top: 45px;
+    left: 265px;
+    transform: rotate(-30deg);
+    transform-origin: 30% 40%;
+    font-family: var(--font-alt);
+} 
+
+header nav {
     background-color: var(--fine-yellow);
     padding: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-header p {
-    position: absolute;
-    left: 995px;
-    top: 40px;
-    transform: rotate(-25deg);
-    transform-origin: 30% 40%;
-}
-
-header p {
-    font-family: var(--font-alt);
 }
 
 header nav li {
@@ -119,8 +125,9 @@ header nav li a:hover {
     color: var(--fine-accent);
 }
 
-header h1 a {
-    color: var(--text-offwhite);
+header h1 a,
+header h1 a:hover {
+    color: #fff;
 }
 
 a {
@@ -248,8 +255,30 @@ a, #join button {
     transition: .3s ease;
 }
 
-footer .container {
-    display: flex;
-    padding: 20px;
+footer {
     background-color: var(--fine-yellow);
+}
+
+footer .container {
+    text-align: center;
+    padding: 20px;
+}
+
+footer .container ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer .container li {
+    padding: 10px;
+    list-style: none;
+    font-weight: 500;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--fine-accent);
 }
